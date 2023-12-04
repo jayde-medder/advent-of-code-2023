@@ -1,0 +1,13 @@
+{
+  "name": "advent-of-code-2023",
+  "type": "commonjs",
+  "scripts": {
+    "test": "vitest",
+    "day01": "ts-node src/day01/index.ts"
+  },
+  "author": "Jayde Medder",
+  "devDependencies": {
+    "ts-node": "^10.9.1",
+    "vitest": "^0.33.0"
+  }
+}
