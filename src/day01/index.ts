@@ -1,5 +1,5 @@
 import { scoreLine, scoreMultipleLines, sumScores } from './day01'
-import { readFileAsync } from './readFile'
+import { readFileAsync } from './helper'
 
 async function solution(): Promise<number> {
   let result = 0

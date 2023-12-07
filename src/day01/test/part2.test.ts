@@ -1,5 +1,10 @@
 import { describe, test, expect } from 'vitest'
-import { scoreLine, scoreMultipleLines, sumScores } from '../day01'
+import {
+  scoreLine,
+  scoreMultipleLines,
+  sumScores,
+  scoreLineWithWords,
+} from '../day01'
 import { promises as fsPromises } from 'fs'
 
 //PART TWO TESTS
@@ -9,7 +14,7 @@ describe('PART TWO scoreLine works as expected', () => {
     const line = 'two1nine'
     const expected = 29
 
-    const actual = scoreLine(line)
+    const actual = scoreLineWithWords(line)
 
     expect(actual).toEqual(expected)
   })
@@ -18,7 +23,7 @@ describe('PART TWO scoreLine works as expected', () => {
     const line = 'eightwothree'
     const expected = 83
 
-    const actual = scoreLine(line)
+    const actual = scoreLineWithWords(line)
 
     expect(actual).toEqual(expected)
   })
@@ -27,7 +32,7 @@ describe('PART TWO scoreLine works as expected', () => {
     const line = 'abcone2threexyz'
     const expected = 13
 
-    const actual = scoreLine(line)
+    const actual = scoreLineWithWords(line)
 
     expect(actual).toEqual(expected)
   })
@@ -36,7 +41,7 @@ describe('PART TWO scoreLine works as expected', () => {
     const line = 'xtwone3four'
     const expected = 24
 
-    const actual = scoreLine(line)
+    const actual = scoreLineWithWords(line)
 
     expect(actual).toEqual(expected)
   })
@@ -45,7 +50,7 @@ describe('PART TWO scoreLine works as expected', () => {
     const line = '4nineeightseven2'
     const expected = 42
 
-    const actual = scoreLine(line)
+    const actual = scoreLineWithWords(line)
 
     expect(actual).toEqual(expected)
   })
@@ -54,7 +59,7 @@ describe('PART TWO scoreLine works as expected', () => {
     const line = 'zoneight234'
     const expected = 14
 
-    const actual = scoreLine(line)
+    const actual = scoreLineWithWords(line)
 
     expect(actual).toEqual(expected)
   })
@@ -63,7 +68,7 @@ describe('PART TWO scoreLine works as expected', () => {
     const line = '7pqrstsixteen'
     const expected = 76
 
-    const actual = scoreLine(line)
+    const actual = scoreLineWithWords(line)
 
     expect(actual).toEqual(expected)
   })

@@ -1,6 +1,6 @@
 import { describe, test, expect } from 'vitest'
 import { scoreLine, scoreMultipleLines, sumScores } from '../day01'
-import { readFileAsync } from '../readFile'
+import { readFileAsync } from '../helper'
 
 //PART ONE TESTS!
 
@@ -44,7 +44,7 @@ describe('PART ONE scoreLine works as expected', () => {
 
 describe('PART ONE scoreMultipleLines works as expected', () => {
   test('Text File Example 1: ', async () => {
-    const fileContent = await readFileAsync('./day01.example.txt')
+    const fileContent = await readFileAsync('/test/part1.example.txt')
     const expected = [12, 38, 15, 77]
     if (fileContent !== undefined) {
       const actual = scoreMultipleLines(fileContent)
@@ -57,7 +57,7 @@ describe('PART ONE scoreMultipleLines works as expected', () => {
 
 describe('PART ONE sumScores works as expected', () => {
   test('Text File Example 1: ', async () => {
-    const fileContent = await readFileAsync('./day01.example.txt')
+    const fileContent = await readFileAsync('/test/part1.example.txt')
     const expected = 142
     if (fileContent !== undefined) {
       const scores = scoreMultipleLines(fileContent)
