@@ -39,24 +39,41 @@ function scoreLineWithWords(line: string): number {
     if (numberRegex.test(char)) {
       numbers.push(char)
     } else {
-      const remainingString = line.substring(i)
-      console.log(remainingString)
-      const match = remainingString.match(wordRegex)
-      console.log(match)
-      if (match) {
-        const matchedWord = match[0].toLowerCase()
-        const wordToNumber = getNumberFromWord(matchedWord)
-        if (!isNaN(wordToNumber)) {
-          numbers.push(wordToNumber.toString())
+      let j = i + 3
+      let found = false
+      while (j < i + 6 && !found) {
+        const remainingString = line.substring(i, j)
+        const match = remainingString.match(wordRegex)
+        if (match) {
+          const matchedWord = match[0].toLowerCase()
+          const wordToNumber = getNumberFromWord(matchedWord)
+          if (!isNaN(wordToNumber)) {
+            numbers.push(wordToNumber.toString())
+          }
+          found = true
         }
+        j++
       }
     }
   }
-  console.log('number array: ' + numbers)
   const last = numbers.length - 1
   const result = [numbers[0], numbers[last]]
-  console.log(result)
   return parseInt(result.join(''))
 }
 
-export { scoreLine, scoreMultipleLines, sumScores, scoreLineWithWords }
+function scoreMultipleLinesWithWords(file: string): number[] {
+  const lineArray = file.split('\n')
+  let scores: number[] = []
+  for (let line of lineArray) {
+    scores.push(scoreLineWithWords(line))
+  }
+  return scores
+}
+
+export {
+  scoreLine,
+  scoreMultipleLines,
+  sumScores,
+  scoreLineWithWords,
+  scoreMultipleLinesWithWords,
+}
