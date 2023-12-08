@@ -3,4 +3,4 @@
 My Solutions :)
 
 Day 01 - Complete!
-Day 02 - In progress
+Day 02 - Complete!
