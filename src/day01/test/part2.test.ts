@@ -1,11 +1,5 @@
 import { describe, test, expect } from 'vitest'
-import {
-  scoreLine,
-  scoreMultipleLines,
-  sumScores,
-  scoreLineWithWords,
-} from '../day01'
-import { promises as fsPromises } from 'fs'
+import { scoreLineWithWords } from '../day01'
 
 //PART TWO TESTS
 

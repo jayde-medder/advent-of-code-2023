@@ -44,7 +44,7 @@ describe('PART ONE scoreLine works as expected', () => {
 
 describe('PART ONE scoreMultipleLines works as expected', () => {
   test('Text File Example 1: ', async () => {
-    const fileContent = await readFileAsync('/test/part1.example.txt')
+    const fileContent = await readFileAsync('test/part1.example.txt')
     const expected = [12, 38, 15, 77]
     if (fileContent !== undefined) {
       const actual = scoreMultipleLines(fileContent)

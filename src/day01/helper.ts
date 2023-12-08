@@ -36,4 +36,4 @@ function getNumberFromWord(word: string): number {
   }
 }
 
-export { readFileAsync, getNumberFromWord }
+export { getNumberFromWord, readFileAsync }
