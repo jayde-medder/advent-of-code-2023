@@ -1,5 +1,5 @@
 import { describe, test, expect } from 'vitest'
-import { readFileAsync } from '../helper'
+import { readFileAsync } from '../../fileutils'
 import { powerOfMinimumSet, getGameArray, sumOfPowers } from '../day02'
 
 describe('PART TWO powerOfMinimumSet works as expected', () => {
@@ -54,7 +54,7 @@ describe('PART TWO powerOfMinimumSet works as expected', () => {
 
 describe('PART TWO sumOfPowers works as expected', () => {
   test('Example 1', async () => {
-    const fileContent = await readFileAsync('test/part1.example.txt')
+    const fileContent = await readFileAsync('/src/day02/test/part1.example.txt')
     const expected = 2286
     if (fileContent !== undefined) {
       const gameArray = getGameArray(fileContent)

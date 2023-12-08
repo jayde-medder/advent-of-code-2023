@@ -1,10 +1,12 @@
 // src/fileUtils.ts
 
 import { promises as fsPromises } from 'fs'
+import { join } from 'path'
 
 async function readFileAsync(filePath: string) {
   try {
-    const fullPath = `${__dirname}/${filePath}`
+    const fullPath = join(process.cwd(), filePath)
+
     const fileContent = await fsPromises.readFile(fullPath, 'utf8')
     return fileContent
   } catch (err) {

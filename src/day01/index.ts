@@ -3,13 +3,13 @@ import {
   sumScores,
   scoreMultipleLinesWithWords,
 } from './day01'
-import { readFileAsync } from './helper'
+import { readFileAsync } from '../fileutils'
 
 // SOLUTION PART ONE
 
 async function solution(): Promise<number> {
   let result = 0
-  const fileContent = await readFileAsync('./day01.input.txt')
+  const fileContent = await readFileAsync('/src/day01/day01.input.txt')
   if (fileContent !== undefined) {
     const scores = scoreMultipleLines(fileContent)
     result = sumScores(scores)
@@ -27,7 +27,7 @@ solution()
 
 async function solutionPartTwo(): Promise<number> {
   let result = 0
-  const fileContent = await readFileAsync('./day01.input.txt')
+  const fileContent = await readFileAsync('/src/day01/day01.input.txt')
   if (fileContent !== undefined) {
     const scores = scoreMultipleLinesWithWords(fileContent)
     result = sumScores(scores)

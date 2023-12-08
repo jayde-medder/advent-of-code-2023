@@ -5,7 +5,7 @@ import {
   possibleGames,
   sumIds,
 } from '../day02'
-import { readFileAsync } from '../helper'
+import { readFileAsync } from '../../fileutils'
 
 describe('PART ONE maxEachColorByGame works as expected', () => {
   test('Example 1', () => {
@@ -59,7 +59,7 @@ describe('PART ONE maxEachColorByGame works as expected', () => {
 
 describe('PART ONE getGameArray works as expected', () => {
   test('Example 1', async () => {
-    const fileContent = await readFileAsync('test/part1.example.txt')
+    const fileContent = await readFileAsync('/src/day02/test/part1.example.txt')
     const expected = [
       {
         id: 1,
@@ -93,7 +93,7 @@ describe('PART ONE getGameArray works as expected', () => {
 
 describe('PART ONE possibleGames works as expected', () => {
   test('Example 1', async () => {
-    const fileContent = await readFileAsync('test/part1.example.txt')
+    const fileContent = await readFileAsync('/src/day02/test/part1.example.txt')
     const expected = [
       { id: 1, colorCounts: { blue: 6, red: 4, green: 2 } },
       { id: 2, colorCounts: { blue: 4, red: 1, green: 3 } },
@@ -111,7 +111,7 @@ describe('PART ONE possibleGames works as expected', () => {
 
 describe('PART ONE sumIds works as expected', () => {
   test('Example 1', async () => {
-    const fileContent = await readFileAsync('test/part1.example.txt')
+    const fileContent = await readFileAsync('/src/day02/test/part1.example.txt')
     const expected = 8
     if (fileContent !== undefined) {
       const gameArray = getGameArray(fileContent)

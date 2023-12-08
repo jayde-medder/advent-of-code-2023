@@ -1,11 +1,11 @@
-import { readFileAsync } from './helper'
+import { readFileAsync } from '../fileutils'
 import { getGameArray, possibleGames, sumIds, sumOfPowers } from './day02'
 
 // SOLUTION PART ONE
 
 async function solution(): Promise<number> {
   let result = 0
-  const fileContent = await readFileAsync('./day02.input.txt')
+  const fileContent = await readFileAsync('./src/day02/day02.input.txt')
   if (fileContent !== undefined) {
     const gameArray = getGameArray(fileContent)
     const successfulGames = possibleGames(gameArray)
@@ -26,7 +26,7 @@ solution()
 
 async function solutionPartTwo(): Promise<number> {
   let result = 0
-  const fileContent = await readFileAsync('./day02.input.txt')
+  const fileContent = await readFileAsync('./src/day02/day02.input.txt')
   if (fileContent !== undefined) {
     const gameArray = getGameArray(fileContent)
     result = sumOfPowers(gameArray)
