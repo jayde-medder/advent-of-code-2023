@@ -3,7 +3,8 @@
   "type": "commonjs",
   "scripts": {
     "test": "vitest",
-    "day01": "ts-node src/day01/index.ts"
+    "day01": "ts-node src/day01/index.ts",
+    "day02": "ts-node src/day02/index.ts"
   },
   "author": "Jayde Medder",
   "devDependencies": {
